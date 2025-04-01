@@ -448,7 +448,7 @@ void CheckUpdate::Install() {
     QString rootPath;
     Common::FS::PathToQString(rootPath, std::filesystem::current_path());
 
-    QString tempDirPath = userPath + "/temp_download_update";
+    QString tempDirPath = "\"" + userPath + "/temp_download_update\"";
     QString startingUpdate = tr("Starting Update...");
 
     QString binaryStartingUpdate;
